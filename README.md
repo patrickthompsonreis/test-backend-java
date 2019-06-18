@@ -21,3 +21,4 @@ A regra de validação do registro é se a diferença da dataIncl comparado com 
 ## Orientações Gerais
 Você deve fazer um fork deste projeto e efetuar um pull request com as suas implementações.
 É obrigatório ter o Docker-compose para a execução do projeto.
+É obrigatório testes unitários.
