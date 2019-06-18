@@ -1,6 +1,6 @@
 # Samples backend java
 
-Este projeto tem o intuito de avaliar dos candidatos a ingressarem na Itix.
+Este projeto tem o intuito de avaliar os candidatos que estão em processo seletivo na Itix.
 
 As tecnologias envolvidas desejáveis são:
  - JAVA 10 (open jdk);
@@ -19,5 +19,5 @@ O projeto deve prover endpoint para consultar um determinado cep. O sistema vai 
 A regra de validação do registro é se a diferença da dataIncl comparado com a data e hora atual for menor que 5 minutos é um registro valido. 
 
 ## Orientações Gerais
-Você deve fazer um fork deste projeto e efetuar um PR com as suas implementações.
+Você deve fazer um fork deste projeto e efetuar um pull request com as suas implementações.
 É obrigatório ter o Docker-compose para a execução do projeto.
