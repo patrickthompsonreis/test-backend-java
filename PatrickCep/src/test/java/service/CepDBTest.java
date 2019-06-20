@@ -6,9 +6,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CepDBTest {
-    CepDB bancoTeste = new CepDB();
-    Cep cepDoPatrick = new Cep("29780000", "Rua A", "apto 1", "Bairro Modelo", "Sao Diego do Java", "ES");
-    Cep cepDoDiego = new Cep("12345678", "Rua do Metal", "casa", "bairro Darkness", "Colonia", "kl");
+    private CepDB bancoTeste = new CepDB();
+    private Cep cepDoPatrick = new Cep("29780000", "Rua A", "apto 1", "Bairro Modelo", "Sao Diego do Java", "ES", "", "", "");
+    Cep cepDoDiego = new Cep("12345678", "Rua do Metal", "casa", "bairro Darkness", "Colonia", "kl", "", "", "");
 
     @Test
     public void retornaOCepSeExistir(){

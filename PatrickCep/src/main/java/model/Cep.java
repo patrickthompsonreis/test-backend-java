@@ -10,14 +10,20 @@ public class Cep {
     private String bairro;
     private String localidade;
     private String uf;
+    private String unidade;
+    private String ibge;
+    private String gia;
 
-    public Cep(String cep, String logradouro, String complemento, String bairro, String localidade, String uf) {
+    public Cep(String cep, String logradouro, String complemento, String bairro, String localidade, String uf, String unidade, String ibge, String gia) {
         this.cep = cep;
         this.logradouro = logradouro;
         this.complemento = complemento;
         this.bairro = bairro;
         this.localidade = localidade;
         this.uf = uf;
+        this.unidade = unidade;
+        this.ibge = ibge;
+        this.gia = gia;
     }
 
     public Cep(String cep){
@@ -25,11 +31,7 @@ public class Cep {
     }
 
     public boolean validaTamanhoCep() {
-        if(this.cep.length() == 8){
-            return true;
-        } else {
-            return false;
-        }
+        return this.cep.length() == 8;
     }
 
     public String getLogradouro() {
@@ -46,15 +48,17 @@ public class Cep {
                 Objects.equals(complemento, cep1.complemento) &&
                 Objects.equals(bairro, cep1.bairro) &&
                 Objects.equals(localidade, cep1.localidade) &&
-                Objects.equals(uf, cep1.uf);
+                Objects.equals(uf, cep1.uf) &&
+                Objects.equals(unidade, cep1.unidade) &&
+                Objects.equals(ibge, cep1.ibge) &&
+                Objects.equals(gia, cep1.gia);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cep, logradouro, complemento, bairro, localidade, uf);
+        return Objects.hash(cep, logradouro, complemento, bairro, localidade, uf, unidade, ibge, gia);
     }
 
-    //Escrita das informações do CEP
     @Override
     public String toString() {
         return "Cep{" +
@@ -64,6 +68,9 @@ public class Cep {
                 ", bairro='" + bairro + '\'' +
                 ", localidade='" + localidade + '\'' +
                 ", uf='" + uf + '\'' +
+                ", unidade='" + unidade + '\'' +
+                ", ibge='" + ibge + '\'' +
+                ", gia='" + gia + '\'' +
                 '}';
     }
 }

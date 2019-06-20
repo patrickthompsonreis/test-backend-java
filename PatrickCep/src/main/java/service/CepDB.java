@@ -23,9 +23,9 @@ public class CepDB {
     }
 
     public void criaExemplos() {
-        this.banco.put("29781555", new Cep("29781555", "Rua 1", "casa", "Bairro A", "Vila Velha", "ES"));
-        this.banco.put("30500123", new Cep("30500123", "Rua 40", "apto 303", "Bairro Nobre", "Vitoria", "ES"));
-        this.banco.put("77888999", new Cep("77888999", "Rua Nova", "s/n", "Bairro Central", "São Paulo", "SP"));
+        this.banco.put("29781555", new Cep("29781555", "Rua 1", "casa", "Bairro A", "Vila Velha", "ES", "", "", ""));
+        this.banco.put("30500123", new Cep("30500123", "Rua 40", "apto 303", "Bairro Nobre", "Vitoria", "ES", "", "", ""));
+        this.banco.put("77888999", new Cep("77888999", "Rua Nova", "s/n", "Bairro Central", "São Paulo", "SP", "", "", ""));
     }
 
     public boolean existeCep(String cep) {
