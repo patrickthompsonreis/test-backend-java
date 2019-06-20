@@ -26,8 +26,8 @@ public class CepTest {
 
     @Test
     public void cepsComValoresIguaisDevemSerIguais() {
-        Cep cep1 = new Cep("A", "1", "C", "3", "E", "5");
-        Cep cep2 = new Cep("A", "1", "C", "3", "E", "5");
+        Cep cep1 = new Cep("A", "1", "C", "3", "E", "5", "ola", "", "");
+        Cep cep2 = new Cep("A", "1", "C", "3", "E", "5", "ola", "", "");
         assertEquals(cep1, cep2);
     }
 }
