@@ -1,5 +1,8 @@
 package service;
 
+import com.squareup.moshi.JsonAdapter;
+import com.squareup.moshi.Moshi;
+import com.squareup.moshi.Types;
 import model.Cep;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -10,6 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
 public class CepService {
@@ -19,8 +25,10 @@ public class CepService {
 
     Logger logger = LoggerFactory.getLogger(CepService.class);
 
-    public CepService(){
+    Moshi moshi = new Moshi.Builder().build();
+    JsonAdapter<Cep> cepAdapter = moshi.adapter(Cep.class);
 
+    public CepService(){
     }
 
     public boolean existeCepNoBanco(String cep){
@@ -51,5 +59,14 @@ public class CepService {
         } catch (IOException e) {
             return e.getMessage();
         }
+    }
+
+    public HashMap<String,Cep> retornaBanco() {
+        return this.cepDB.getDb();
+    }
+
+    public void insereCep(String cep) throws IOException {
+        Cep novoCep = cepAdapter.fromJson(cep);
+        this.cepDB.insereCep(novoCep.getCep().replace("-", ""), novoCep);
     }
 }

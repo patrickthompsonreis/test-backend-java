@@ -1,8 +1,9 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Cep {
+public class Cep implements Serializable {
 
     private String cep;
     private String logradouro;
@@ -36,6 +37,38 @@ public class Cep {
 
     public String getLogradouro() {
         return this.logradouro;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getLocalidade() {
+        return localidade;
+    }
+
+    public String getUf() {
+        return uf;
+    }
+
+    public String getUnidade() {
+        return unidade;
+    }
+
+    public String getIbge() {
+        return ibge;
+    }
+
+    public String getGia() {
+        return gia;
     }
 
     @Override

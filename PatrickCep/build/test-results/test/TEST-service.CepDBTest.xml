@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="service.CepDBTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-06-20T18:44:00" hostname="DESKTOP-K7SU59U" time="0.0">
+<testsuite name="service.CepDBTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-06-20T19:43:37" hostname="DESKTOP-K7SU59U" time="0.0">
   <properties/>
   <testcase name="criaExemplosDeveRetornarCep" classname="service.CepDBTest" time="0.0"/>
   <testcase name="retornaOCepSeExistir" classname="service.CepDBTest" time="0.0"/>
