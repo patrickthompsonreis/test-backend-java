@@ -20,12 +20,12 @@ public class CepController {
 
     @GetMapping("/cep")
     public List<Cep> findAll() {
-        return cepRepository.findAll();
+        return cepService.retornaBanco();
     }
 
     @GetMapping("/cep/{cep}")
     public Cep findByUserId(@PathVariable("cep") String cep) {
-        return cepRepository.getOne(cep);
+        return cepService.retornaCep(cep);
     }
 
     @PostMapping("/cep")

@@ -10,15 +10,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import patrick.repository.CepRepository;
 
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.List;
 
 @Service
 public class CepService {
 
     @Autowired
     CepDB cepDB;
+
+    @Autowired
+    private CepRepository cepRepository;
 
     Logger logger = LoggerFactory.getLogger(CepService.class);
 
@@ -28,16 +32,20 @@ public class CepService {
     public CepService(){
     }
 
-    public boolean existeCepNoBanco(String cep){
-        return cepDB.existeCep(cep);
-    }
-
     public Cep retornaCep(String cep){
-        return cepDB.consultaCep(cep);
-    }
-
-    public void iniciaBanco(){
-        cepDB.criaExemplos();
+        if(cepRepository.existsById(cep)) {
+            return cepRepository.getOne(cep);
+        } else {
+            Cep novoCep = new Cep();
+            try {
+                novoCep = cepAdapter.fromJson(consultaViaCep(cep));
+                cepRepository.saveAndFlush(novoCep);
+                return novoCep;
+            } catch (IOException e) {
+                logger.warn("Erro em consulta Viacep");
+            }
+            return novoCep;
+        }
     }
 
     //Realiza consulta no site viacep
@@ -58,12 +66,7 @@ public class CepService {
         }
     }
 
-    public HashMap<String,Cep> retornaBanco() {
-        return this.cepDB.getDb();
-    }
-
-    public void insereCep(String cep) throws IOException {
-        Cep novoCep = cepAdapter.fromJson(cep);
-        this.cepDB.insereCep(novoCep.getCep().replace("-", ""), novoCep);
+    public List<Cep> retornaBanco() {
+        return cepRepository.findAll();
     }
 }

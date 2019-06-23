@@ -21,6 +21,10 @@ public class Cep implements Serializable {
     private String ibge;
     private String gia;
 
+    public Cep() {
+
+    }
+
     public Cep(String cep, String logradouro, String complemento, String bairro, String localidade, String uf, String unidade, String ibge, String gia) {
         this.cep = cep;
         this.logradouro = logradouro;
