@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  application-server:
+    image: application
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - application-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://application-db/cep?useSSL=false&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=dbuser
+      - SPRING_DATASOURCE_PASSWORD=dbpass
+  application-db:
+    image: mysql:8.0.14
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbpass
+      - MYSQL_DATABASE=cep
+      - MYSQL_ONETIME_PASSWORD=true

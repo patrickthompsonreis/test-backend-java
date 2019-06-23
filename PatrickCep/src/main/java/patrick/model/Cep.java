@@ -1,10 +1,16 @@
 package patrick.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table(name = "cep")
 public class Cep implements Serializable {
 
+    @Id
     private String cep;
     private String logradouro;
     private String complemento;
@@ -69,6 +75,42 @@ public class Cep implements Serializable {
 
     public String getGia() {
         return gia;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public void setLocalidade(String localidade) {
+        this.localidade = localidade;
+    }
+
+    public void setUf(String uf) {
+        this.uf = uf;
+    }
+
+    public void setUnidade(String unidade) {
+        this.unidade = unidade;
+    }
+
+    public void setIbge(String ibge) {
+        this.ibge = ibge;
+    }
+
+    public void setGia(String gia) {
+        this.gia = gia;
     }
 
     @Override

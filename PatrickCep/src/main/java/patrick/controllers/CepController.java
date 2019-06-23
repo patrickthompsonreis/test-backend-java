@@ -1,14 +1,12 @@
 package patrick.controllers;
 
+import org.springframework.web.bind.annotation.*;
 import patrick.model.Cep;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import patrick.repository.CepRepository;
 import patrick.service.CepService;
 
-import java.io.IOException;
-import java.util.HashMap;
+import java.util.List;
 
 @RestController
 public class CepController {
@@ -17,30 +15,21 @@ public class CepController {
     @Autowired
     CepService cepService;
 
-    //Construção do CEP
-    @RequestMapping("/cep")
-    public Cep cep(@RequestParam(value="numeroCep") String numeroCep) {
-        if(cepService.existeCepNoBanco(numeroCep)){
-            return cepService.retornaCep(numeroCep);
-        } else {
-            String cepDoSiteViaCep = cepService.consultaViaCep(numeroCep);
-            try {
-                cepService.insereCep(cepDoSiteViaCep);
-            } catch (IOException e) {
+    @Autowired
+    CepRepository cepRepository;
 
-            }
-            return cepService.retornaCep(numeroCep);
-        }
+    @GetMapping("/cep")
+    public List<Cep> findAll() {
+        return cepRepository.findAll();
     }
 
-    @RequestMapping("/iniciaBanco")
-    public String iniciaBanco(){
-        cepService.iniciaBanco();
-        return "O banco de dados foi iniciado com 3 CEP";
+    @GetMapping("/cep/{cep}")
+    public Cep findByUserId(@PathVariable("cep") String cep) {
+        return cepRepository.getOne(cep);
     }
 
-    @RequestMapping("/banco")
-    public HashMap<String, Cep> banco() {
-        return cepService.retornaBanco();
+    @PostMapping("/cep")
+    public Cep create(@RequestBody Cep cep) {
+        return cepRepository.save(cep);
     }
 }
