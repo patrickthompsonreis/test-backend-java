@@ -11,15 +11,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import patrick.repository.CepRepository;
-
 import java.io.IOException;
 import java.util.List;
 
 @Service
 public class CepService {
-
-    @Autowired
-    CepDB cepDB;
 
     @Autowired
     private CepRepository cepRepository;
@@ -32,18 +28,16 @@ public class CepService {
     public CepService(){
     }
 
-    public Cep retornaCep(String cep){
+    public List<Cep> retornaBanco() {
+        return cepRepository.findAll();
+    }
+
+    public Cep retornaCep(String cep) throws IOException {
         if(cepRepository.existsById(cep)) {
             return cepRepository.getOne(cep);
         } else {
-            Cep novoCep = new Cep();
-            try {
-                novoCep = cepAdapter.fromJson(consultaViaCep(cep));
-                cepRepository.saveAndFlush(novoCep);
-                return novoCep;
-            } catch (IOException e) {
-                logger.warn("Erro em consulta Viacep");
-            }
+            Cep novoCep = cepAdapter.fromJson(consultaViaCep(cep));
+            cepRepository.saveAndFlush(novoCep);
             return novoCep;
         }
     }
@@ -64,9 +58,5 @@ public class CepService {
         } catch (IOException e) {
             return e.getMessage();
         }
-    }
-
-    public List<Cep> retornaBanco() {
-        return cepRepository.findAll();
     }
 }
