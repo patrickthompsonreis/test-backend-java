@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import patrick.repository.CepRepository;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -37,6 +38,7 @@ public class CepService {
             return cepRepository.getOne(cep);
         } else {
             Cep novoCep = cepAdapter.fromJson(consultaViaCep(cep));
+            novoCep.setDataIncl(new Date());
             cepRepository.saveAndFlush(novoCep);
             return novoCep;
         }

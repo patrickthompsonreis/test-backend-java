@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -20,6 +21,7 @@ public class Cep implements Serializable {
     private String unidade;
     private String ibge;
     private String gia;
+    private Date dataIncl;
 
     public Cep() {
 
@@ -81,6 +83,10 @@ public class Cep implements Serializable {
         return gia;
     }
 
+    public Date getDataIncl() {
+        return dataIncl;
+    }
+
     public void setCep(String cep) {
         this.cep = cep;
     }
@@ -115,6 +121,10 @@ public class Cep implements Serializable {
 
     public void setGia(String gia) {
         this.gia = gia;
+    }
+
+    public void setDataIncl(Date dataIncl) {
+        this.dataIncl = dataIncl;
     }
 
     @Override
