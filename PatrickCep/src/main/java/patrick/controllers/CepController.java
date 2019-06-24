@@ -32,6 +32,5 @@ public class CepController {
             logger.warn("Erro retornando o Cep");
             return null;
         }
-
     }
 }

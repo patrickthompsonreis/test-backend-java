@@ -2,6 +2,7 @@ package patrick.service;
 
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
+import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter;
 import patrick.model.Cep;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -14,6 +15,7 @@ import patrick.repository.CepRepository;
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CepService {
@@ -23,7 +25,9 @@ public class CepService {
 
     Logger logger = LoggerFactory.getLogger(CepService.class);
 
-    Moshi moshi = new Moshi.Builder().build();
+    Moshi moshi = new Moshi.Builder()
+            .add(Date.class, new Rfc3339DateJsonAdapter())
+            .build();
     JsonAdapter<Cep> cepAdapter = moshi.adapter(Cep.class);
 
     public CepService(){
@@ -34,9 +38,16 @@ public class CepService {
     }
 
     public Cep retornaCep(String cep) throws IOException {
-        if(cepRepository.existsById(cep)) {
-            return cepRepository.getOne(cep);
+
+        String cepComSeparador = addSeparador(cep);
+
+        Optional<Cep> possivelCep = cepRepository.findById(cepComSeparador);
+
+        if(possivelCep.isPresent() && possivelCep.get().dataInclApos5Minutos()) {
+            logger.info("Encontrou o Cep no banco");
+            return possivelCep.get();
         } else {
+            logger.info("Nao encontrou o Cep ou Cep est[a vencido");
             Cep novoCep = cepAdapter.fromJson(consultaViaCep(cep));
             novoCep.setDataIncl(new Date());
             cepRepository.saveAndFlush(novoCep);
@@ -60,5 +71,11 @@ public class CepService {
         } catch (IOException e) {
             return e.getMessage();
         }
+    }
+
+    public String addSeparador(String cep) {
+        StringBuilder sb = new StringBuilder(cep);
+        sb.insert(5, "-");
+        return sb.toString();
     }
 }

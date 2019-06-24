@@ -11,6 +11,8 @@ import java.util.Objects;
 @Table(name = "cep")
 public class Cep implements Serializable {
 
+    public static final int cincoMinutosEmMilisegundos = 300000;
+
     @Id
     private String cep;
     private String logradouro;
@@ -161,5 +163,9 @@ public class Cep implements Serializable {
                 ", ibge='" + ibge + '\'' +
                 ", gia='" + gia + '\'' +
                 '}';
+    }
+
+    public boolean dataInclApos5Minutos() {
+        return getDataIncl().after(new Date(System.currentTimeMillis() - cincoMinutosEmMilisegundos));
     }
 }
