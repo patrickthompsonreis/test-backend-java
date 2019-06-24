@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d822890-15ef-4907-ae39-0cacb0ab82b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/patrick/service/CepServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/patrick/controllers/LogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/patrick/model/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/patrick/repository/LogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/patrick/service/LogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/patrick/controllers/CepController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/patrick/controllers/CepController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/patrick/model/Cep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/patrick/model/Cep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/patrick/service/CepService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/patrick/service/CepService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/patrick/model/CepTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/patrick/model/CepTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -64,30 +64,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/patrick/controllers/CepController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret column="28" selection-start-column="28" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/patrick/model/Cep.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1860">
+            <state relative-caret-position="413">
               <caret line="168" column="102" selection-start-line="168" selection-start-column="102" selection-end-line="168" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -96,11 +75,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/patrick/repository/CepRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/patrick/model/CepTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/patrick/service/CepService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+            <state relative-caret-position="127">
+              <caret line="48" column="70" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,23 +111,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/patrick/service/CepServiceTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/patrick/service/LogService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="77" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
+            <state relative-caret-position="420">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -134,8 +128,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -167,6 +161,11 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/patrick/model/Cep.java" />
         <option value="$PROJECT_DIR$/src/test/java/patrick/service/CepServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/patrick/model/Log.java" />
+        <option value="$PROJECT_DIR$/src/main/java/patrick/repository/LogRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/patrick/service/LogService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/patrick/controllers/LogController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/patrick/model/CepTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/patrick/service/CepService.java" />
       </list>
     </option>
@@ -221,6 +220,56 @@
             <path>
               <item name="PatrickCep" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="PatrickCep" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="patrick" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="model" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="PatrickCep" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="PatrickCep" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="patrick" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="repository" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="PatrickCep" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="PatrickCep" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="patrick" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="service" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="PatrickCep" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="PatrickCep" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="PatrickCep" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="PatrickCep" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="PatrickCep" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="PatrickCep" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="patrick" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="PatrickCep" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="PatrickCep" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="patrick" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="model" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="PatrickCep" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="PatrickCep" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="~/projetos/test-backend-java/PatrickCep" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
@@ -261,7 +310,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CepServiceTest.deveInserirSeparadorNoLocalCorreto">
+  <component name="RunManager" selected="Gradle.CepTest.seDataDeInclusaoMenorQue5MinutosRetornaTrue">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="patrick.App" />
       <module name="PatrickCep.main" />
@@ -274,26 +323,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="CepDBTest.criaExemplosDeveRetornarCep" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;service.CepDBTest.criaExemplosDeveRetornarCep&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="CepServiceTest.deveInserirSeparadorNoLocalCorreto" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -315,31 +344,52 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PatrickCep [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CepTest.seDataDeInclusaoMaiorQue5MinutosRetornaFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;patrick.model.CepTest.seDataDeInclusaoMaiorQue5MinutosRetornaFalse&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="bootRun" />
+            <option value=":cleanTest" />
+            <option value=":test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'PatrickCep.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CepTest.seDataDeInclusaoMenorQue5MinutosRetornaFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests *" />
+        <option name="scriptParameters" value="--tests &quot;patrick.model.CepTest.seDataDeInclusaoMenorQue5MinutosRetornaFalse&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CepTest.seDataDeInclusaoMenorQue5MinutosRetornaTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;patrick.model.CepTest.seDataDeInclusaoMenorQue5MinutosRetornaTrue&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -356,11 +406,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CepTest.seDataDeInclusaoMenorQue5MinutosRetornaTrue" />
+        <item itemvalue="Gradle.CepTest.seDataDeInclusaoMaiorQue5MinutosRetornaFalse" />
+        <item itemvalue="Gradle.CepTest.seDataDeInclusaoMenorQue5MinutosRetornaFalse" />
         <item itemvalue="Gradle.CepServiceTest.deveInserirSeparadorNoLocalCorreto" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Gradle.PatrickCep [bootRun]" />
-        <item itemvalue="Gradle.Tests in 'PatrickCep.test'" />
-        <item itemvalue="Gradle.CepDBTest.criaExemplosDeveRetornarCep" />
       </list>
     </recent_temporary>
   </component>
@@ -400,18 +450,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CepDBTest - 2019.06.20 at 11h 23m 04s.xml">
-      <configuration name="CepDBTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CepTest_cepsComValoresIguaisDevemSerIguais - 2019.06.20 at 11h 33m 39s.xml">
-      <configuration name="CepTest.cepsComValoresIguaisDevemSerIguais" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CepTest_cepsComValoresIguaisDevemSerIguais - 2019.06.20 at 11h 34m 52s.xml">
-      <configuration name="CepTest.cepsComValoresIguaisDevemSerIguais" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="CepDBTest_retornaOCepSeExistir - 2019.06.20 at 11h 57m 13s.xml">
-      <configuration name="CepDBTest.retornaOCepSeExistir" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="CepDBTest_retornaOCepSeExistir - 2019.06.20 at 11h 57m 57s.xml">
       <configuration name="CepDBTest.retornaOCepSeExistir" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -430,12 +468,24 @@
     <history-entry file="CepServiceTest_deveInserirSeparadorNoLocalCorreto - 2019.06.24 at 03h 49m 29s.xml">
       <configuration name="CepServiceTest.deveInserirSeparadorNoLocalCorreto" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="CepTest_seDataDeInclusaoMenorQue5MinutosRetornaFalse - 2019.06.24 at 04h 35m 30s.xml">
+      <configuration name="CepTest.seDataDeInclusaoMenorQue5MinutosRetornaFalse" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="CepTest_seDataDeInclusaoMenorQue5MinutosRetornaFalse - 2019.06.24 at 04h 37m 45s.xml">
+      <configuration name="CepTest.seDataDeInclusaoMenorQue5MinutosRetornaFalse" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="CepTest_seDataDeInclusaoMaiorQue5MinutosRetornaFalse - 2019.06.24 at 04h 39m 13s.xml">
+      <configuration name="CepTest.seDataDeInclusaoMaiorQue5MinutosRetornaFalse" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="CepTest_seDataDeInclusaoMenorQue5MinutosRetornaTrue - 2019.06.24 at 04h 41m 08s.xml">
+      <configuration name="CepTest.seDataDeInclusaoMenorQue5MinutosRetornaTrue" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.105347164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1707901" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -509,26 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/patrick/model/CepTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/patrick/repository/CepRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/patrick/service/CepDB.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/patrick/service/CepDBTest.java" />
     <entry file="file://$PROJECT_DIR$/Dockerfile">
@@ -562,30 +592,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/patrick/controllers/CepController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/patrick/model/Cep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="168" column="102" selection-start-line="168" selection-start-column="102" selection-end-line="168" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -599,10 +609,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/patrick/repository/LogRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/patrick/model/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/patrick/controllers/CepController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/patrick/controllers/LogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/patrick/model/CepTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/patrick/model/Cep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="168" column="102" selection-start-line="168" selection-start-column="102" selection-end-line="168" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/patrick/repository/CepRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/patrick/service/CepService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+        <state relative-caret-position="127">
+          <caret line="48" column="70" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/patrick/service/LogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

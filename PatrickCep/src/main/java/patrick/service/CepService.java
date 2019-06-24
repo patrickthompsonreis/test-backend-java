@@ -23,6 +23,9 @@ public class CepService {
     @Autowired
     private CepRepository cepRepository;
 
+    @Autowired
+    private LogService logService;
+
     Logger logger = LoggerFactory.getLogger(CepService.class);
 
     Moshi moshi = new Moshi.Builder()
@@ -43,7 +46,7 @@ public class CepService {
 
         Optional<Cep> possivelCep = cepRepository.findById(cepComSeparador);
 
-        if(possivelCep.isPresent() && possivelCep.get().dataInclApos5Minutos()) {
+        if(possivelCep.isPresent() && possivelCep.get().dataInclValida()) {
             logger.info("Encontrou o Cep no banco");
             return possivelCep.get();
         } else {
@@ -66,7 +69,7 @@ public class CepService {
 
         try (Response response = client.newCall(request).execute()) {
             String resultado = response.body().string();
-            logger.info("Request: {}, Response: {}", request, resultado);
+            logService.insereLog(request.toString(), resultado);
             return resultado;
         } catch (IOException e) {
             return e.getMessage();

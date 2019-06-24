@@ -165,7 +165,7 @@ public class Cep implements Serializable {
                 '}';
     }
 
-    public boolean dataInclApos5Minutos() {
+    public boolean dataInclValida() {
         return getDataIncl().after(new Date(System.currentTimeMillis() - cincoMinutosEmMilisegundos));
     }
 }
